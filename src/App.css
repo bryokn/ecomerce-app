@@ -1,0 +1,13 @@
+body, h1 {
+    margin: 0;
+    padding: 50px;
+    color: #2d2fb4;
+    text-decoration: #282c34;
+  }
+  
+  .App h1 {
+    color: rgb(165, 53, 187);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 1000;
+  }

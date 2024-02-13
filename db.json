@@ -7,8 +7,7 @@
       "brand": "Jack Daniel's",
       "volume_ml": 750,
       "price_usd": 25.99,
-      "quantity": 50,
-      "image": "https://i.pinimg.com/474x/18/b3/3b/18b33b396ba808ef7efeb3a2f195d960.jpg"
+      "quantity": 50
     },
     {
       "id": 2,
@@ -17,8 +16,7 @@
       "brand": "Absolut",
       "volume_ml": 750,
       "price_usd": 19.99,
-      "quantity": 75,
-      "image": "https://i.pinimg.com/474x/8d/c9/d7/8dc9d7e614bc60c93f31b9ab96fbe513.jpg"
+      "quantity": 75
     },
     {
       "id": 3,
@@ -27,8 +25,7 @@
       "brand": "Barefoot",
       "volume_ml": 750,
       "price_usd": 9.99,
-      "quantity": 100,
-      "image": "https://www.seriouseats.com/thmb/CtYuSY5MTIm-5SbCok4xfIvbGCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__drinks.seriouseats.com__images__2012__05__20120607barefootredsprim-84da04f1b2094b588b16e6cd175b12b8.jpg"
+      "quantity": 100
     },
     {
       "id": 4,
@@ -37,8 +34,7 @@
       "brand": "Captain Morgan",
       "volume_ml": 750,
       "price_usd": 15.99,
-      "quantity": 60,
-      "image": "https://i.pinimg.com/474x/52/d6/10/52d610d80311a23f3e25f17d8ce3c23b.jpg"
+      "quantity": 60
     },
     {
       "id": 5,
@@ -47,8 +43,7 @@
       "brand": "Budweiser",
       "volume_ml": 355,
       "price_usd": 1.99,
-      "quantity": 200,
-      "image": "https://i.pinimg.com/736x/a2/2a/75/a22a759600a43829de7cb6ec8d797a0f.jpg"
+      "quantity": 200
     },
     {
       "id": 6,
@@ -57,8 +52,7 @@
       "brand": "Tanqueray",
       "volume_ml": 750,
       "price_usd": 27.99,
-      "quantity": 40,
-      "image": "https://i.pinimg.com/474x/76/af/5c/76af5c243fc446ad90ca0049adaa1c7f.jpg"
+      "quantity": 40
     },
     {
       "id": 7,
@@ -67,8 +61,7 @@
       "brand": "Jose Cuervo",
       "volume_ml": 750,
       "price_usd": 21.99,
-      "quantity": 55,
-      "image": "https://i.pinimg.com/474x/7c/7f/c6/7c7fc65ca38f21c5acad050487e7579b.jpg"
+      "quantity": 55
     },
     {
       "id": 8,
@@ -77,8 +70,7 @@
       "brand": "Yellow Tail",
       "volume_ml": 750,
       "price_usd": 8.99,
-      "quantity": 85,
-      "image": "https://i.pinimg.com/474x/d5/3e/26/d53e265e902a0277c95b5c8ad9208ac4.jpg"
+      "quantity": 85
     },
     {
       "id": 9,
@@ -87,8 +79,7 @@
       "brand": "Glenfiddich",
       "volume_ml": 750,
       "price_usd": 39.99,
-      "quantity": 30,
-      "image": "https://i.pinimg.com/474x/9b/5e/38/9b5e38e5bac86beb1852ee39535b746d.jpg"
+      "quantity": 30
     },
     {
       "id": 10,
@@ -97,8 +88,7 @@
       "brand": "Kendall-Jackson",
       "volume_ml": 750,
       "price_usd": 14.99,
-      "quantity": 70,
-      "image": "https://i.pinimg.com/474x/62/c1/15/62c115c392800591d7da0e17e86f5636.jpg"
+      "quantity": 70
     },
     {
       "id": 11,
@@ -107,8 +97,7 @@
       "brand": "Hennessy",
       "volume_ml": 750,
       "price_usd": 32.99,
-      "quantity": 25,
-      "image": "https://i.pinimg.com/474x/11/17/ed/1117ed03c388e68ac1ac46b1bb50751c.jpg"
+      "quantity": 25
     },
     {
       "id": 12,
@@ -117,8 +106,7 @@
       "brand": "Kim Crawford",
       "volume_ml": 750,
       "price_usd": 17.99,
-      "quantity": 55,
-      "image": "https://i.pinimg.com/474x/5a/bb/1a/5abb1a17099a1a6d8705f9f92e4937fd.jpg"
+      "quantity": 55
     },
     {
       "id": 13,
@@ -127,8 +115,7 @@
       "brand": "Corona",
       "volume_ml": 355,
       "price_usd": 2.49,
-      "quantity": 180,
-      "image": "https://i.pinimg.com/474x/22/70/17/22701784deb4629c2c3952f473a509af.jpg"
+      "quantity": 180
     },
     {
       "id": 14,
@@ -137,8 +124,7 @@
       "brand": "Malibu",
       "volume_ml": 750,
       "price_usd": 18.99,
-      "quantity": 45,
-      "image": "https://i.pinimg.com/474x/dc/7e/22/dc7e227334d74ecf57cb19526174ce5e.jpg"
+      "quantity": 45
     },
     {
       "id": 15,
@@ -147,8 +133,7 @@
       "brand": "Moët & Chandon",
       "volume_ml": 750,
       "price_usd": 49.99,
-      "quantity": 20,
-      "image": "https://i.pinimg.com/474x/fc/5f/fa/fc5ffa4127e47aeedc8dc9d850017822.jpg"
+      "quantity": 20
     },
     {
       "id": 16,
@@ -157,8 +142,7 @@
       "brand": "Jameson",
       "volume_ml": 750,
       "price_usd": 29.99,
-      "quantity": 40,
-      "image": "https://i.pinimg.com/736x/fc/3f/96/fc3f96e8ee457e9e64df744f6c713675.jpg"
+      "quantity": 40
     },
     {
       "id": 17,
@@ -167,8 +151,7 @@
       "brand": "Robert Mondavi",
       "volume_ml": 750,
       "price_usd": 21.99,
-      "quantity": 60,
-      "image": "https://i.pinimg.com/474x/43/8d/8e/438d8e2072756096a7ea9700350e9bfa.jpg"
+      "quantity": 60
     },
     {
       "id": 18,
@@ -177,8 +160,7 @@
       "brand": "Heineken",
       "volume_ml": 355,
       "price_usd": 2.99,
-      "quantity": 150,
-      "image": "https://i.pinimg.com/474x/07/91/71/0791715e0de69ffe11e48f122ab5f470.jpg"
+      "quantity": 150
     },
     {
       "id": 19,
@@ -187,8 +169,7 @@
       "brand": "Rémy Martin",
       "volume_ml": 750,
       "price_usd": 34.99,
-      "quantity": 35,
-      "image": "https://i.pinimg.com/474x/01/af/1f/01af1ff8781536f62928e6a812c841d1.jpg"
+      "quantity": 35
     },
     {
       "id": 20,
@@ -197,8 +178,7 @@
       "brand": "Patrón",
       "volume_ml": 750,
       "price_usd": 39.99,
-      "quantity": 25,
-      "image": "https://i.pinimg.com/474x/cf/92/14/cf9214ed43c12cb580b9603be3eb9510.jpg"
+      "quantity": 25
     },
     {
       "id": 21,
@@ -207,8 +187,7 @@
       "brand": "Bombay Sapphire",
       "volume_ml": 750,
       "price_usd": 29.99,
-      "quantity": 30,
-      "image": "https://i.pinimg.com/474x/e1/a7/87/e1a78720d206c86245e2f20db6531c30.jpg"
+      "quantity": 30
     },
     {
       "id": 22,
@@ -217,8 +196,7 @@
       "brand": "Yellow Tail",
       "volume_ml": 750,
       "price_usd": 12.99,
-      "quantity": 45,
-      "image": "https://i.pinimg.com/474x/5d/a5/5f/5da55f56be42dc56663651430cd21349.jpg"
+      "quantity": 45
     },
     {
       "id": 23,
@@ -227,8 +205,7 @@
       "brand": "Columbia Crest",
       "volume_ml": 750,
       "price_usd": 11.99,
-      "quantity": 80,
-      "image": "https://i.pinimg.com/474x/0c/e0/c7/0ce0c73d73f864db3b6116c4a971018f.jpg"
+      "quantity": 80
     },
     {
       "id": 24,
@@ -237,8 +214,7 @@
       "brand": "Sierra Nevada",
       "volume_ml": 355,
       "price_usd": 2.79,
-      "quantity": 120,
-      "image": "https://i.pinimg.com/474x/e5/a8/c8/e5a8c8ba179d144895b8cb75c34d2da4.jpg"
+      "quantity": 120
     },
     {
       "id": 25,
@@ -247,8 +223,8 @@
       "brand": "Bulleit",
       "volume_ml": 750,
       "price_usd": 34.99,
-      "quantity": 50,
-      "image": "https://i.pinimg.com/474x/c6/80/98/c6809847730e308a0bc4711894b2d327.jpg"
+      "quantity": 50
     }
   ]
 }
+  
