@@ -4,28 +4,25 @@ header {
   align-items: center;
   padding: 10px 20px;
 }
-body,
-h1 {
-  margin: 0;
-  padding: 50px;
-  color: #2db438;
-  text-decoration: #282c34;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
+body, h1 {
+    margin: 0;
+    padding: 50px;
+    color: #2db438;
+    text-decoration: #282c34;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  .App h1 {
+    color: rgb(165, 53, 187);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 1000;
+  }
 
-.App h1 {
-  color: rgb(165, 53, 187);
-  text-align: center;
-  font-size: x-large;
-  font-weight: 1000;
-}
-.login-signup {
-  margin-right: 20x;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.login-signup {
-  margin-left: 10px;
+.sign{
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .cards {
