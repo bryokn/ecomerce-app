@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import data from '../db.json';
+import React, { useEffect, useState } from "react";
+import data from "../db.json";
 
 function ProductCatalog() {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,6 @@ function ProductCatalog() {
           <p>Volume: {product.volume_ml} ml</p>
           <p>Price: ${product.price_usd.toFixed(2)}</p>
           <p>Quantity: {product.quantity}</p>
-
         </div>
       ))}
     </div>

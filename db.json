@@ -1,496 +1,497 @@
 {
-    "liquors": [
-      {
-        "id": 1,
-        "name": "Whiskey",
-        "type": "Spirit",
-        "brand": "Jack Daniel's",
-        "volume_ml": 750,
-        "price_usd": 25.99,
-        "quantity": 50,
-        "image_url": "https://cdn.pixabay.com/photo/2018/09/07/01/52/whiskey-3659784_1280.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Vodka",
-        "type": "Spirit",
-        "brand": "Absolut",
-        "volume_ml": 750,
-        "price_usd": 19.99,
-        "quantity": 75,
-        "image_url": "https://cdn.pixabay.com/photo/2017/06/29/18/25/vodka-2455603_1280.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Red Wine",
-        "type": "Wine",
-        "brand": "Barefoot",
-        "volume_ml": 750,
-        "price_usd": 9.99,
-        "quantity": 100,
-        "image_url": "https://images.gotoliquorstore.com/product/1000003621/777fc85c-79dc-4dc7-985a-6c1caa6d9324_360_m.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Rum",
-        "type": "Spirit",
-        "brand": "Captain Morgan",
-        "volume_ml": 750,
-        "price_usd": 15.99,
-        "quantity": 60,
-        "image_url": "https://example.com/rum.jpg"
-      },
-      {
-        "id": 5,
-        "name": "Beer",
-        "type": "Beer",
-        "brand": "Budweiser",
-        "volume_ml": 355,
-        "price_usd": 1.99,
-        "quantity": 200,
-        "image_url": "https://example.com/beer.jpg"
-      },
-      {
-        "id": 6,
-        "name": "Gin",
-        "type": "Spirit",
-        "brand": "Tanqueray",
-        "volume_ml": 750,
-        "price_usd": 27.99,
-        "quantity": 40,
-        "image_url": "https://example.com/gin.jpg"
-      },
-      {
-        "id": 7,
-        "name": "Tequila",
-        "type": "Spirit",
-        "brand": "Jose Cuervo",
-        "volume_ml": 750,
-        "price_usd": 21.99,
-        "quantity": 55,
-        "image_url": "https://example.com/tequila.jpg"
-      },
-      {
-        "id": 8,
-        "name": "White Wine",
-        "type": "Wine",
-        "brand": "Yellow Tail",
-        "volume_ml": 750,
-        "price_usd": 8.99,
-        "quantity": 85,
-        "image_url": "https://example.com/whitewine.jpg"
-      },
-      {
-        "id": 9,
-        "name": "Scotch",
-        "type": "Spirit",
-        "brand": "Glenfiddich",
-        "volume_ml": 750,
-        "price_usd": 39.99,
-        "quantity": 30,
-        "image_url": "https://example.com/scotch.jpg"
-      },
-      {
-        "id": 10,
-        "name": "Chardonnay",
-        "type": "Wine",
-        "brand": "Kendall-Jackson",
-        "volume_ml": 750,
-        "price_usd": 14.99,
-        "quantity": 70,
-        "image_url": "https://example.com/chardonnay.jpg"
-      },
-      {
-        "id": 11,
-        "name": "Brandy",
-        "type": "Spirit",
-        "brand": "Hennessy",
-        "volume_ml": 750,
-        "price_usd": 32.99,
-        "quantity": 25,
-        "image_url": "https://example.com/brandy.jpg"
-      },
-      {
-        "id": 12,
-        "name": "Sauvignon Blanc",
-        "type": "Wine",
-        "brand": "Kim Crawford",
-        "volume_ml": 750,
-        "price_usd": 17.99,
-        "quantity": 55,
-        "image_url": "https://example.com/sauvignonblanc.jpg"
-      },
-      {
-        "id": 13,
-        "name": "Beer",
-        "type": "Beer",
-        "brand": "Corona",
-        "volume_ml": 355,
-        "price_usd": 2.49,
-        "quantity": 180,
-        "image_url": "https://example.com/corona.jpg"
-      },
-      {
-        "id": 14,
-        "name": "Rum",
-        "type": "Spirit",
-        "brand": "Malibu",
-        "volume_ml": 750,
-        "price_usd": 18.99,
-        "quantity": 45,
-        "image_url": "https://example.com/malibu.jpg"
-      },
-      {
-        "id": 15,
-        "name": "Champagne",
-        "type": "Sparkling Wine",
-        "brand": "Moët & Chandon",
-        "volume_ml": 750,
-        "price_usd": 49.99,
-        "quantity": 20,
-        "image_url": "https://example.com/champagne.jpg"
-      },
-      {
-        "id": 16,
-        "name": "Irish Whiskey",
-        "type": "Spirit",
-        "brand": "Jameson",
-        "volume_ml": 750,
-        "price_usd": 29.99,
-        "quantity": 40,
-        "image_url": "https://example.com/irishwhiskey.jpg"
-      },
-      {
-        "id": 17,
-        "name": "Pinot Noir",
-        "type": "Wine",
-        "brand": "Robert Mondavi",
-        "volume_ml": 750,
-        "price_usd": 21.99,
-        "quantity": 60,
-        "image_url": "https://example.com/pinotnoir.jpg"
-      },
-      {
-        "id": 18,
-        "name": "Lager",
-        "type": "Beer",
-        "brand": "Heineken",
-        "volume_ml": 355,
-        "price_usd": 2.99,
-        "quantity": 150,
-        "image_url": "https://example.com/lager.jpg"
-      },
-      {
-        "id": 19,
-        "name": "Cognac",
-        "type": "Spirit",
-        "brand": "Rémy Martin",
-        "volume_ml": 750,
-        "price_usd": 34.99,
-        "quantity": 35,
-        "image_url": "https://example.com/cognac.jpg"
-      },
-      {
-        "id": 20,
-        "name": "Tequila",
-        "type": "Spirit",
-        "brand": "Patrón",
-        "volume_ml": 750,
-        "price_usd": 39.99,
-        "quantity": 25,
-        "image_url": "https://example.com/tequila.jpg"
-      },
-      {
-        "id": 21,
-        "name": "Gin",
-        "type": "Spirit",
-        "brand": "Bombay Sapphire",
-        "volume_ml": 750,
-        "price_usd": 29.99,
-        "quantity": 30,
-        "image_url": "https://example.com/bombaysapphire.jpg"
-      },
-      {
-        "id": 22,
-        "name": "Chardonnay",
-        "type": "Wine",
-        "brand": "Yellow Tail",
-        "volume_ml": 750,
-        "price_usd": 12.99,
-        "quantity": 45,
-        "image_url": "https://example.com/chardonnay.jpg"
-      },
-      {
-        "id": 23,
-        "name": "Merlot",
-        "type": "Wine",
-        "brand": "Columbia Crest",
-        "volume_ml": 750,
-        "price_usd": 11.99,
-        "quantity": 80,
-        "image_url": "https://example.com/merlot.jpg"
-      },
-      {
-        "id": 24,
-        "name": "Pale Ale",
-        "type": "Beer",
-        "brand": "Sierra Nevada",
-        "volume_ml": 355,
-        "price_usd": 2.79,
-        "quantity": 120,
-        "image_url": "https://example.com/paleale.jpg"
-      },
-      {
-        "id": 25,
-        "name": "Rye Whiskey",
-        "type": "Spirit",
-        "brand": "Bulleit",
-        "volume_ml": 750,
-        "price_usd": 34.99,
-        "quantity": 50,
-        "image_url": "https://example.com/ryewhiskey.jpg"
-      },
-      {
-        "id": 26,
-        "name": "Anisette",
-        "type": "Liqueur",
-        "brand": "Marie Brizard",
-        "volume_ml": 750,
-        "price_usd": 18.99,
-        "quantity": 50,
-        "image_url": "https://example.com/anisette.jpg"
-      },
-      {
-        "id": 27,
-        "name": "Cabernet Sauvignon",
-        "type": "Wine",
-        "brand": "Cakebread Cellars",
-        "volume_ml": 750,
-        "price_usd": 59.99,
-        "quantity": 40,
-        "image_url": "https://example.com/cabernetsauvignon.jpg"
-      },
-      {
-        "id": 28,
-        "name": "Pale Ale",
-        "type": "Beer",
-        "brand": "Dogfish Head",
-        "volume_ml": 330,
-        "price_usd": 4.99,
-        "quantity": 100,
-        "image_url": "https://example.com/paleale2.jpg"
-      },
-      {
-        "id": 29,
-        "name": "Gin",
-        "type": "Spirit",
-        "brand": "Hendrick's",
-        "volume_ml": 750,
-        "price_usd": 34.99,
-        "quantity": 25,
-        "image_url": "https://example.com/hendricks.jpg"
-      },
-      {
-        "id": 30,
-        "name": "Chardonnay",
-        "type": "Wine",
-        "brand": "Sonoma-Cutrer",
-        "volume_ml": 750,
-        "price_usd": 29.99,
-        "quantity": 50,
-        "image_url": "https://example.com/chardonnay2.jpg"
-      },
-      {
-        "id": 31,
-        "name": "Porter",
-        "type": "Beer",
-        "brand": "Founders Brewing Co.",
-        "volume_ml": 330,
-        "price_usd": 5.99,
-        "quantity": 80,
-        "image_url": "https://example.com/porter.jpg"
-      },
-      {
-        "id": 32,
-        "name": "Rum",
-        "type": "Spirit",
-        "brand": "Appleton Estate",
-        "volume_ml": 750,
-        "price_usd": 24.99,
-        "quantity": 35,
-        "image_url": "https://example.com/rum2.jpg"
-      },
-      {
-        "id": 33,
-        "name": "Merlot",
-        "type": "Wine",
-        "brand": "Duckhorn",
-        "volume_ml": 750,
-        "price_usd": 39.99,
-        "quantity": 70,
-        "image_url": "https://example.com/merlot2.jpg"
-      },
-      {
-        "id": 34,
-        "name": "Stout",
-        "type": "Beer",
-        "brand": "Founders Brewing Co.",
-        "volume_ml": 330,
-        "price_usd": 6.99,
-        "quantity": 40,
-        "image_url": "https://example.com/stout.jpg"
-      },
-      {
-        "id": 35,
-        "name": "Tequila",
-        "type": "Spirit",
-        "brand": "Don Julio",
-        "volume_ml": 750,
-        "price_usd": 49.99,
-        "quantity": 25,
-        "image_url": "https://example.com/donjulio.jpg"
-      },
-      {
-        "id": 36,
-        "name": "Sauvignon Blanc",
-        "type": "Wine",
-        "brand": "Kim Crawford",
-        "volume_ml": 750,
-        "price_usd": 21.99,
-        "quantity": 50,
-        "image_url": "https://example.com/sauvignonblanc2.jpg"
-      },
-      {
-        "id": 37,
-        "name": "IPA",
-        "type": "Beer",
-        "brand": "Stone Brewing",
-        "volume_ml": 330,
-        "price_usd": 6.99,
-        "quantity": 80,
-        "image_url": "https://example.com/ipa.jpg"
-      },
-      {
-        "id": 38,
-        "name": "Whiskey",
-        "type": "Spirit",
-        "brand": "Woodford Reserve",
-        "volume_ml": 750,
-        "price_usd": 49.99,
-        "quantity": 35,
-        "image_url": "https://example.com/whiskey2.jpg"
-      },
-      {
-        "id": 39,
-        "name": "Champagne",
-        "type": "Sparkling Wine",
-        "brand": "Veuve Clicquot",
-        "volume_ml": 750,
-        "price_usd": 59.99,
-        "quantity": 20,
-        "image_url": "https://example.com/champagne2.jpg"
-      },
-      {
-        "id": 40,
-        "name": "Pinot Grigio",
-        "type": "Wine",
-        "brand": "Santa Margherita",
-        "volume_ml": 750,
-        "price_usd": 24.99,
-        "quantity": 55,
-        "image_url": "https://example.com/pinotgrigio.jpg"
-      },
-      {
-        "id": 41,
-        "name": "Lager",
-        "type": "Beer",
-        "brand": "Samuel Adams",
-        "volume_ml": 330,
-        "price_usd": 3.99,
-        "quantity": 100,
-        "image_url": "https://example.com/lager2.jpg"
-      },
-      {
-        "id": 42,
-        "name": "Cognac",
-        "type": "Spirit",
-        "brand": "Courvoisier",
-        "volume_ml": 750,
-        "price_usd": 44.99,
-        "quantity": 25,
-        "image_url": "https://example.com/cognac2.jpg"
-      },
-      {
-        "id": 43,
-        "name": "Zinfandel",
-        "type": "Wine",
-        "brand": "Seghesio",
-        "volume_ml": 750,
-        "price_usd": 29.99,
-        "quantity": 50,
-        "image_url": "https://example.com/zinfandel.jpg"
-      },
-      {
-        "id": 44,
-        "name": "Sake",
-        "type": "Rice Wine",
-        "brand": "Gekkeikan",
-        "volume_ml": 750,
-        "price_usd": 19.99,
-        "quantity": 35,
-        "image_url": "https://example.com/sake.jpg"
-      },
-      {
-        "id": 45,
-        "name": "American Wheat Beer",
-        "type": "Beer",
-        "brand": "Boulevard Brewing Co.",
-        "volume_ml": 330,
-        "price_usd": 4.99,
-        "quantity": 80,
-        "image_url": "https://example.com/americanwheatbeer.jpg"
-      },
-      {
-        "id": 46,
-        "name": "Absinthe",
-        "type": "Spirit",
-        "brand": "Pernod",
-        "volume_ml": 750,
-        "price_usd": 59.99,
-        "quantity": 25,
-        "image_url": "https://example.com/absinthe.jpg"
-      },
-      {
-        "id": 47,
-        "name": "Sangiovese",
-        "type": "Wine",
-        "brand": "Antinori",
-        "volume_ml": 750,
-        "price_usd": 34.99,
-        "quantity": 50,
-        "image_url": "https://example.com/sangiovese.jpg"
-      },
-      {
-        "id": 48,
-        "name": "Cider",
-        "type": "Cider",
-        "brand": "Angry Orchard",
-        "volume_ml": 355,
-        "price_usd": 2.99,
-        "quantity": 100,
-        "image_url": "https://example.com/cider.jpg"
-      },
-      {
-        "id": 49,
-        "name": "Scotch",
-        "type": "Spirit",
-        "brand": "Macallan",
-        "volume_ml": 750,
-        "price_usd": 69.99,
-        "quantity": 35,
-        "image_url": "https://example.com/scotch2.jpg"
-      },
-      {
+  "liquors": [
+    {
+      "id": 1,
+      "name": "Whiskey",
+      "type": "Spirit",
+      "brand": "Jack Daniel's",
+      "volume_ml": 750,
+      "price_usd": 25.99,
+      "quantity": 50,
+      "image_url": "https://i.pinimg.com/474x/18/b3/3b/18b33b396ba808ef7efeb3a2f195d960.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Vodka",
+      "type": "Spirit",
+      "brand": "Absolut",
+      "volume_ml": 750,
+      "price_usd": 19.99,
+      "quantity": 75,
+      "image_url": "https://i.pinimg.com/474x/8d/c9/d7/8dc9d7e614bc60c93f31b9ab96fbe513.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Red Wine",
+      "type": "Wine",
+      "brand": "Barefoot",
+      "volume_ml": 750,
+      "price_usd": 9.99,
+      "quantity": 100,
+      "image_url": "https://www.seriouseats.com/thmb/CtYuSY5MTIm-5SbCok4xfIvbGCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__drinks.seriouseats.com__image_urls__2012__05__20120607barefootredsprim-84da04f1b2094b588b16e6cd175b12b8.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rum",
+      "type": "Spirit",
+      "brand": "Captain Morgan",
+      "volume_ml": 750,
+      "price_usd": 15.99,
+      "quantity": 60,
+      "image_url": "https://i.pinimg.com/474x/52/d6/10/52d610d80311a23f3e25f17d8ce3c23b.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Beer",
+      "type": "Beer",
+      "brand": "Budweiser",
+      "volume_ml": 355,
+      "price_usd": 1.99,
+      "quantity": 200,
+      "image_url": "https://i.pinimg.com/736x/a2/2a/75/a22a759600a43829de7cb6ec8d797a0f.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Gin",
+      "type": "Spirit",
+      "brand": "Tanqueray",
+      "volume_ml": 750,
+      "price_usd": 27.99,
+      "quantity": 40,
+      "image_url": "https://i.pinimg.com/474x/76/af/5c/76af5c243fc446ad90ca0049adaa1c7f.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Tequila",
+      "type": "Spirit",
+      "brand": "Jose Cuervo",
+      "volume_ml": 750,
+      "price_usd": 21.99,
+      "quantity": 55,
+      "image_url": "https://i.pinimg.com/474x/7c/7f/c6/7c7fc65ca38f21c5acad050487e7579b.jpg"
+    },
+    {
+      "id": 8,
+      "name": "White Wine",
+      "type": "Wine",
+      "brand": "Yellow Tail",
+      "volume_ml": 750,
+      "price_usd": 8.99,
+      "quantity": 85,
+      "image_url": "https://i.pinimg.com/474x/d5/3e/26/d53e265e902a0277c95b5c8ad9208ac4.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Scotch",
+      "type": "Spirit",
+      "brand": "Glenfiddich",
+      "volume_ml": 750,
+      "price_usd": 39.99,
+      "quantity": 30,
+      "image_url": "https://i.pinimg.com/474x/9b/5e/38/9b5e38e5bac86beb1852ee39535b746d.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Chardonnay",
+      "type": "Wine",
+      "brand": "Kendall-Jackson",
+      "volume_ml": 750,
+      "price_usd": 14.99,
+      "quantity": 70,
+      "image_url": "https://i.pinimg.com/474x/62/c1/15/62c115c392800591d7da0e17e86f5636.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Brandy",
+      "type": "Spirit",
+      "brand": "Hennessy",
+      "volume_ml": 750,
+      "price_usd": 32.99,
+      "quantity": 25,
+      "image_url": "https://i.pinimg.com/474x/11/17/ed/1117ed03c388e68ac1ac46b1bb50751c.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Sauvignon Blanc",
+      "type": "Wine",
+      "brand": "Kim Crawford",
+      "volume_ml": 750,
+      "price_usd": 17.99,
+      "quantity": 55,
+      "image_url": "https://i.pinimg.com/474x/5a/bb/1a/5abb1a17099a1a6d8705f9f92e4937fd.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Beer",
+      "type": "Beer",
+      "brand": "Corona",
+      "volume_ml": 355,
+      "price_usd": 2.49,
+      "quantity": 180,
+      "image_url": "https://i.pinimg.com/474x/22/70/17/22701784deb4629c2c3952f473a509af.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Rum",
+      "type": "Spirit",
+      "brand": "Malibu",
+      "volume_ml": 750,
+      "price_usd": 18.99,
+      "quantity": 45,
+      "image_url": "https://i.pinimg.com/474x/dc/7e/22/dc7e227334d74ecf57cb19526174ce5e.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Champagne",
+      "type": "Sparkling Wine",
+      "brand": "Moët & Chandon",
+      "volume_ml": 750,
+      "price_usd": 49.99,
+      "quantity": 20,
+      "image_url": "https://i.pinimg.com/474x/fc/5f/fa/fc5ffa4127e47aeedc8dc9d850017822.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Irish Whiskey",
+      "type": "Spirit",
+      "brand": "Jameson",
+      "volume_ml": 750,
+      "price_usd": 29.99,
+      "quantity": 40,
+      "image_url": "https://i.pinimg.com/736x/fc/3f/96/fc3f96e8ee457e9e64df744f6c713675.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Pinot Noir",
+      "type": "Wine",
+      "brand": "Robert Mondavi",
+      "volume_ml": 750,
+      "price_usd": 21.99,
+      "quantity": 60,
+      "image_url": "https://i.pinimg.com/474x/43/8d/8e/438d8e2072756096a7ea9700350e9bfa.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Lager",
+      "type": "Beer",
+      "brand": "Heineken",
+      "volume_ml": 355,
+      "price_usd": 2.99,
+      "quantity": 150,
+      "image_url": "https://i.pinimg.com/474x/07/91/71/0791715e0de69ffe11e48f122ab5f470.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Cognac",
+      "type": "Spirit",
+      "brand": "Rémy Martin",
+      "volume_ml": 750,
+      "price_usd": 34.99,
+      "quantity": 35,
+      "image_url": "https://i.pinimg.com/474x/01/af/1f/01af1ff8781536f62928e6a812c841d1.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Tequila",
+      "type": "Spirit",
+      "brand": "Patrón",
+      "volume_ml": 750,
+      "price_usd": 39.99,
+      "quantity": 25,
+      "image_url": "https://i.pinimg.com/474x/cf/92/14/cf9214ed43c12cb580b9603be3eb9510.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Gin",
+      "type": "Spirit",
+      "brand": "Bombay Sapphire",
+      "volume_ml": 750,
+      "price_usd": 29.99,
+      "quantity": 30,
+      "image_url": "https://i.pinimg.com/474x/e1/a7/87/e1a78720d206c86245e2f20db6531c30.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Chardonnay",
+      "type": "Wine",
+      "brand": "Yellow Tail",
+      "volume_ml": 750,
+      "price_usd": 12.99,
+      "quantity": 45,
+      "image_url": "https://i.pinimg.com/474x/5d/a5/5f/5da55f56be42dc56663651430cd21349.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Merlot",
+      "type": "Wine",
+      "brand": "Columbia Crest",
+      "volume_ml": 750,
+      "price_usd": 11.99,
+      "quantity": 80,
+      "image_url": "https://i.pinimg.com/474x/0c/e0/c7/0ce0c73d73f864db3b6116c4a971018f.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Pale Ale",
+      "type": "Beer",
+      "brand": "Sierra Nevada",
+      "volume_ml": 355,
+      "price_usd": 2.79,
+      "quantity": 120,
+      "image_url": "https://i.pinimg.com/474x/e5/a8/c8/e5a8c8ba179d144895b8cb75c34d2da4.jpg"
+    },
+
+    {
+      "id": 25,
+      "name": "Rye Whiskey",
+      "type": "Spirit",
+      "brand": "Bulleit",
+      "volume_ml": 750,
+      "price_usd": 34.99,
+      "quantity": 50,
+      "image_url": "https://i.pinimg.com/474x/f7/1f/dc/f71fdc37dc8828c3adb8b9e2a3491dd1.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Anisette",
+      "type": "Liqueur",
+      "brand": "Marie Brizard",
+      "volume_ml": 750,
+      "price_usd": 18.99,
+      "quantity": 50,
+      "image_url": "https://example.com/anisette.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Cabernet Sauvignon",
+      "type": "Wine",
+      "brand": "Cakebread Cellars",
+      "volume_ml": 750,
+      "price_usd": 59.99,
+      "quantity": 40,
+      "image_url": "https://example.com/cabernetsauvignon.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Pale Ale",
+      "type": "Beer",
+      "brand": "Dogfish Head",
+      "volume_ml": 330,
+      "price_usd": 4.99,
+      "quantity": 100,
+      "image_url": "https://example.com/paleale2.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Gin",
+      "type": "Spirit",
+      "brand": "Hendrick's",
+      "volume_ml": 750,
+      "price_usd": 34.99,
+      "quantity": 25,
+      "image_url": "https://example.com/hendricks.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Chardonnay",
+      "type": "Wine",
+      "brand": "Sonoma-Cutrer",
+      "volume_ml": 750,
+      "price_usd": 29.99,
+      "quantity": 50,
+      "image_url": "https://example.com/chardonnay2.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Porter",
+      "type": "Beer",
+      "brand": "Founders Brewing Co.",
+      "volume_ml": 330,
+      "price_usd": 5.99,
+      "quantity": 80,
+      "image_url": "https://example.com/porter.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Rum",
+      "type": "Spirit",
+      "brand": "Appleton Estate",
+      "volume_ml": 750,
+      "price_usd": 24.99,
+      "quantity": 35,
+      "image_url": "https://example.com/rum2.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Merlot",
+      "type": "Wine",
+      "brand": "Duckhorn",
+      "volume_ml": 750,
+      "price_usd": 39.99,
+      "quantity": 70,
+      "image_url": "https://example.com/merlot2.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Stout",
+      "type": "Beer",
+      "brand": "Founders Brewing Co.",
+      "volume_ml": 330,
+      "price_usd": 6.99,
+      "quantity": 40,
+      "image_url": "https://example.com/stout.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Tequila",
+      "type": "Spirit",
+      "brand": "Don Julio",
+      "volume_ml": 750,
+      "price_usd": 49.99,
+      "quantity": 25,
+      "image_url": "https://example.com/donjulio.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Sauvignon Blanc",
+      "type": "Wine",
+      "brand": "Kim Crawford",
+      "volume_ml": 750,
+      "price_usd": 21.99,
+      "quantity": 50,
+      "image_url": "https://example.com/sauvignonblanc2.jpg"
+    },
+    {
+      "id": 37,
+      "name": "IPA",
+      "type": "Beer",
+      "brand": "Stone Brewing",
+      "volume_ml": 330,
+      "price_usd": 6.99,
+      "quantity": 80,
+      "image_url": "https://example.com/ipa.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Whiskey",
+      "type": "Spirit",
+      "brand": "Woodford Reserve",
+      "volume_ml": 750,
+      "price_usd": 49.99,
+      "quantity": 35,
+      "image_url": "https://example.com/whiskey2.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Champagne",
+      "type": "Sparkling Wine",
+      "brand": "Veuve Clicquot",
+      "volume_ml": 750,
+      "price_usd": 59.99,
+      "quantity": 20,
+      "image_url": "https://example.com/champagne2.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Pinot Grigio",
+      "type": "Wine",
+      "brand": "Santa Margherita",
+      "volume_ml": 750,
+      "price_usd": 24.99,
+      "quantity": 55,
+      "image_url": "https://example.com/pinotgrigio.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Lager",
+      "type": "Beer",
+      "brand": "Samuel Adams",
+      "volume_ml": 330,
+      "price_usd": 3.99,
+      "quantity": 100,
+      "image_url": "https://example.com/lager2.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Cognac",
+      "type": "Spirit",
+      "brand": "Courvoisier",
+      "volume_ml": 750,
+      "price_usd": 44.99,
+      "quantity": 25,
+      "image_url": "https://example.com/cognac2.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Zinfandel",
+      "type": "Wine",
+      "brand": "Seghesio",
+      "volume_ml": 750,
+      "price_usd": 29.99,
+      "quantity": 50,
+      "image_url": "https://example.com/zinfandel.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Sake",
+      "type": "Rice Wine",
+      "brand": "Gekkeikan",
+      "volume_ml": 750,
+      "price_usd": 19.99,
+      "quantity": 35,
+      "image_url": "https://example.com/sake.jpg"
+    },
+    {
+      "id": 45,
+      "name": "American Wheat Beer",
+      "type": "Beer",
+      "brand": "Boulevard Brewing Co.",
+      "volume_ml": 330,
+      "price_usd": 4.99,
+      "quantity": 80,
+      "image_url": "https://example.com/americanwheatbeer.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Absinthe",
+      "type": "Spirit",
+      "brand": "Pernod",
+      "volume_ml": 750,
+      "price_usd": 59.99,
+      "quantity": 25,
+      "image_url": "https://example.com/absinthe.jpg"
+    },
+    {
+      "id": 47,
+      "name": "Sangiovese",
+      "type": "Wine",
+      "brand": "Antinori",
+      "volume_ml": 750,
+      "price_usd": 34.99,
+      "quantity": 50,
+      "image_url": "https://example.com/sangiovese.jpg"
+    },
+    {
+      "id": 48,
+      "name": "Cider",
+      "type": "Cider",
+      "brand": "Angry Orchard",
+      "volume_ml": 355,
+      "price_usd": 2.99,
+      "quantity": 100,
+      "image_url": "https://example.com/cider.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Scotch",
+      "type": "Spirit",
+      "brand": "Macallan",
+      "volume_ml": 750,
+      "price_usd": 69.99,
+      "quantity": 35,
+      "image_url": "https://example.com/scotch2.jpg"
+    },
+    {
       "id": 51,
       "name": "Barleywine",
       "type": "Beer",
@@ -740,7 +741,5 @@
       "quantity": 100,
       "image_url": "https://example.com/scotch2.jpg"
     }
-
-    ]
+  ]
 }
-  
