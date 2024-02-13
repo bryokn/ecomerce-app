@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from "react";
 import data from "../db.json";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 function ProductCatalog() {
   const [products, setProducts] = useState([]);
@@ -8,22 +20,49 @@ function ProductCatalog() {
     setProducts(data.liquors);
   }, []);
 
-  return (
-    <div>
-      <h2>Product Catalog</h2>
-      {products.map((product, index) => (
-        <div key={index}>
-          <h3>{product.name}</h3>
-          <img src={product.image_url} alt={product.name} />
-          <p>Type: {product.type}</p>
-          <p>Brand: {product.brand}</p>
-          <p>Volume: {product.volume_ml} ml</p>
-          <p>Price: ${product.price_usd.toFixed(2)}</p>
-          <p>Quantity: {product.quantity}</p>
-        </div>
-      ))}
-    </div>
-  );
+  const productsCard = products.map((product) => (
+    <Card
+      className="cards"
+      maxW="sm"
+      key={product.id}
+      borderWidth="1px"
+      borderRadius="lg"
+      borderColor="blue"
+      overflow="hidden"
+      width="250px"
+      margin="1rem"
+      alignItems="center"
+      justifyContent="center"
+      background="#eaf6ff"
+    >
+      <CardBody>
+        <Heading size="md">Name: {product.name}</Heading>
+        <Text color="black">Type: {product.type}</Text>
+        <Image src={product.image_url} alt={product.name} borderRadius="lg" />
+        <Stack mt="6" spacing="0">
+          <Text color="black">Volume: {product.volume_ml}</Text>
+          <Text color="green">Price: {product.price_usd}</Text>
+          <Text color="red">Quantity: {product.quantity}</Text>
+        </Stack>
+      </CardBody>
+      <Divider />
+      <CardFooter>
+        <ButtonGroup spacing="2">
+          <Button
+            variant="solid"
+            colorScheme="red"
+            w="200px"
+            alignItems="center"
+            justifyContent="center"
+          >
+            Add to Cart
+          </Button>
+        </ButtonGroup>
+      </CardFooter>
+    </Card>
+  ));
+
+  return <div>{productsCard}</div>;
 }
 
 export default ProductCatalog;
