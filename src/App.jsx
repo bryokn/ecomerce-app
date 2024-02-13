@@ -2,7 +2,7 @@ import { Button } from "@chakra-ui/react";
 import "./App.css";
 import ProductCatalog from "./ProductCatalog";
 import { useState } from "react";
-import { Stack, Button } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { Login, Signup } from './AuthForms';
 import UserPage from './UserPage';
 

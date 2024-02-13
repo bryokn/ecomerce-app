@@ -49,7 +49,7 @@ function Login({ isOpen, onClose, setUser }) {
           {error && <div style={{ color: 'red' }}>{error}</div>}
         </ModalBody>
         <ModalFooter>
-          {'tTomorrow is Valentines'}
+          {'Bottoms Up!!'}
         </ModalFooter>
       </ModalContent>
     </Modal>
@@ -108,7 +108,7 @@ function Signup({ isOpen, onClose, setUser }) {
           </Formik>
         </ModalBody>
         <ModalFooter>
-          { 'Tomorrow is valentines'}
+          { 'Welcome! Lets get tipsy!'}
         </ModalFooter>
       </ModalContent>
     </Modal>
