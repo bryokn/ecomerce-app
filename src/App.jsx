@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import "./App.css";
 import ProductCatalog from "./ProductCatalog";
 
@@ -6,8 +7,8 @@ function App() {
     <>
       <h1>Welcome to the Cocktail Bar!</h1>
       <div className="login-signup">
-        <button>Login</button>
-        <button>Sign Up</button>
+        <Button>Login</Button>
+        <Button>Sign Up</Button>
       </div>
       <h2>Pick your Poison!!</h2>
       <h5>(Not literally!!)</h5>
