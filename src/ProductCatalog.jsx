@@ -71,26 +71,6 @@ function ProductCatalog() {
     </Card>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;
-      </CardBody>
-      <Divider />
-      <CardFooter>
-        <ButtonGroup spacing="2">
-          <Button
-            variant="solid"
-            colorScheme="red"
-            w="200px"
-            alignItems="center"
-            justifyContent="center"
-          >
-            Add to Cart
-          </Button>
-        </ButtonGroup>
-      </CardFooter>
-    </Card>
-  ));
-
-  return <div className="cards-container">{productsCard}</div>;
-}
+  return <div className="cards-container">{productsCard}</div>;}
 
 export default ProductCatalog;
