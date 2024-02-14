@@ -34,6 +34,7 @@ function ProductCatalog() {
       margin="1rem"
       alignItems="center"
       justifyContent="center"
+      background="#eaf6ffi"
     >
       <CardBody>
         <Heading size="md">Name: {product.name}</Heading>
@@ -71,6 +72,25 @@ function ProductCatalog() {
   ));
 
   return <div className="cards-container">{productsCard}</div>;
+      </CardBody>
+      <Divider />
+      <CardFooter>
+        <ButtonGroup spacing="2">
+          <Button
+            variant="solid"
+            colorScheme="red"
+            w="200px"
+            alignItems="center"
+            justifyContent="center"
+          >
+            Add to Cart
+          </Button>
+        </ButtonGroup>
+      </CardFooter>
+    </Card>
+  ));
+
+  return <div className="cards-container">{productsCard}</div>;
 }
 
-export default ProductCatalog
+export default ProductCatalog;
