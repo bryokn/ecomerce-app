@@ -42,7 +42,7 @@ function ProductCatalog() {
         <Stack mt="6" spacing="0">
           <Text color="black">Volume: {product.volume_ml}</Text>
           <Text color="green">Price: {product.price_usd}</Text>
-          <Text color="red">Quantity: {product.quantity}</Text>
+          <Text color="black">Quantity: {product.quantity}</Text>
         </Stack>
       </CardBody>
       <Divider />

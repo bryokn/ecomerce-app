@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react";
-import "./App.css";
 import ProductCatalog from "./ProductCatalog";
 
 function App() {
