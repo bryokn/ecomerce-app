@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+//import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const config ={
   initialColorMode: "light",

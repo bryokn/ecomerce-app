@@ -1,3 +1,57 @@
+import React, { useEffect, useState } from "react";
+import data from "../db.json";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+
+function ProductCatalog() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(data.liquors);
+  }, []);
+
+  const productsCard = products.map((product) => (
+    <Card
+      className="cards"
+      maxW="sm"
+      key={product.id}
+      borderWidth="1px"
+      borderRadius="lg"
+      borderColor="blue"
+      overflow="hidden"
+      width="250px"
+      margin="1rem"
+      alignItems="center"
+      justifyContent="center"
+      background="#b3b3ff"
+    >
+      <CardBody>
+        <Heading size="md">Name: {product.name}</Heading>
+        <Text color="black">Type: {product.type}</Text>
+        <Flex w="100%" h="350px">
+          <Image
+            src={product.image_url}
+            alt={product.name}
+            borderRadius="lg"
+            objectFit="cover"
+            w={"100vw"}
+          />
+        </Flex>
+        <Stack mt="6" spacing="0">
+          <Text color="black">Volume: {product.volume_ml}</Text>
+          <Text color="green">Price: {product.price_usd}</Text>
+          <Text color="black">Quantity: {product.quantity}</Text>
 import { useState } from "react";
 import { Button, useColorMode, Stack, ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
