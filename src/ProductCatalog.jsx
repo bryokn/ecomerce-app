@@ -34,7 +34,7 @@ function ProductCatalog() {
       margin="1rem"
       alignItems="center"
       justifyContent="center"
-      background="#eaf6ff"
+      background="#b3b3ff"
     >
       <CardBody>
         <Heading size="md">Name: {product.name}</Heading>
