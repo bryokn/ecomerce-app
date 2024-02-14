@@ -62,7 +62,7 @@ function ProductCatalog() {
     </Card>
   ));
 
-  return <div>{productsCard}</div>;
+  return <div className="cards-container">{productsCard}</div>;
 }
 
 export default ProductCatalog;
