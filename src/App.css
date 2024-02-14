@@ -28,9 +28,17 @@ h1 {
   margin-left: 10px;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; 
+  justify-items: center;
+  padding: 20px; 
 }
+
+.cards {
+  width: 100%; 
+}
+
 
 
