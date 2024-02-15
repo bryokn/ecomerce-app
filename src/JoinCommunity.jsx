@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Box, Input } from "@chakra-ui/react";
+import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Box, Input, Checkbox } from "@chakra-ui/react";
 
 function JoinCommunityButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isAbove18, setIsAbove18] = useState(false); 
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleOpen = () => {
@@ -16,9 +17,13 @@ function JoinCommunityButton() {
   };
 
   const handleApplyNow = () => {
-    
     if (!name || !email) {
       alert("Please enter your name and email address.");
+      return;
+    }
+
+    if (!isAbove18) {
+      alert("You must confirm that you are 18 or above to apply.");
       return;
     }
 
@@ -55,6 +60,12 @@ function JoinCommunityButton() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  <Checkbox
+                    isChecked={isAbove18}
+                    onChange={(e) => setIsAbove18(e.target.checked)}
+                  >
+                    I confirm that I am 18 years or above.
+                  </Checkbox>
                 </VStack>
                 <Button
                   colorScheme="teal"
@@ -80,4 +91,5 @@ function JoinCommunityButton() {
 }
 
 export default JoinCommunityButton;
+
 
