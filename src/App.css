@@ -91,6 +91,7 @@ footer .apply-button button {
 
 footer .apply-button button:hover {
   background-color: #ff6347;
+}
 
 .buttons {
   float: left;
@@ -182,5 +183,4 @@ footer .apply-button button:hover {
   white-space: nowrap;
   position: relative;
   width: 100%;
-
 }
