@@ -2,20 +2,19 @@ import React, { useEffect, useState } from "react";
 import data from "../db.json";
 import {
   Button,
-  ButtonGroup,
   Card,
   CardBody,
-  CardFooter,
-  Divider,
   Flex,
   Heading,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import NavBar from "./NavBar";
 
 function ProductCatalog({ addToCart }) {
   const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setProducts(data.liquors);
@@ -25,58 +24,88 @@ function ProductCatalog({ addToCart }) {
     addToCart(product); // Call addToCart function with the selected product
   };
 
-  const productsCard = products.map((product) => (
-    <Card
-      className="cards"
-      maxW="sm"
-      key={product.id}
-      borderWidth="1px"
-      borderRadius="lg"
-      borderColor="blue"
-      overflow="hidden"
-      width="250px"
-      margin="1rem"
-      alignItems="center"
-      justifyContent="center"
-      background="#eaf6ffi"
-    >
-      <CardBody>
-        <Heading size="md">Name: {product.name}</Heading>
-        <Text color="black">Type: {product.type}</Text>
-        <Flex w="100%" h="350px">
-          <Image
-            src={product.image_url}
-            alt={product.name}
-            borderRadius="lg"
-            objectFit="cover"
-            w={"100vw"}
-          />
-        </Flex>
-        <Stack mt="6" spacing="0">
-          <Text color="black">Volume: {product.volume_ml}</Text>
-          <Text color="green">Price: {product.price_usd}</Text>
-          <Text color="black">Quantity: {product.quantity}</Text>
-        </Stack>
-      </CardBody>
-      <Divider />
-      <CardFooter>
-        <ButtonGroup spacing="2">
-          <Button
-            variant="solid"
-            colorScheme="red"
-            w="200px"
+  function handleSearchInput(e) {
+    setSearchTerm(e.target.value.toLowerCase());
+  }
+
+  const filteredProducts = products.filter(
+    (product) =>
+      product.brand.toLowerCase().includes(searchTerm) ||
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.type.toLowerCase().includes(searchTerm)
+  );
+
+  const productsCard = filteredProducts.map((product) => (
+    <div className="card" key={product.id}>
+      <div className="card-inner">
+        <div className="card-front">
+          <Heading
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            bgClip="text"
+            fontWeight="extrabold"
+            size="md"
+            fontSize="2rem"
+          >
+            {product.brand}
+          </Heading>
+          <img src={product.image_url} alt={product.name} />
+        </div>
+        <div className="card-back">
+          <Card
+            maxW="sm"
+            key={product.id}
             alignItems="center"
             justifyContent="center"
-            onClick={() => handleAddToCart(product)}
+            borderRadius="20px"
           >
-            Add to Cart
-          </Button>
-        </ButtonGroup>
-      </CardFooter>
-    </Card>
+            <CardBody>
+              <Heading
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontWeight="extrabold"
+                size="md"
+              >
+                {product.brand}
+              </Heading>
+              <Text color="black">Type: {product.type}</Text>
+              <Flex w="100%" h="350px">
+                <Image
+                  src={product.image_url}
+                  alt={product.name}
+                  borderRadius="lg"
+                  objectFit="cover"
+                  w={"100vw"}
+                />
+              </Flex>
+
+              <Text colorScheme="black">Volume: {product.volume_ml}</Text>
+              <Text colorScheme="black">Price: {product.price_usd}</Text>
+              <Text colorScheme="black">Quantity: {product.quantity}</Text>
+
+              <Button
+                variant="solid"
+                colorScheme="red"
+                w="200px"
+                alignItems="center"
+                justifyContent="center"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </Button>
+            </CardBody>
+          </Card>
+        </div>
+      </div>
+    </div>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;
+
+  return (
+    <>
+      <NavBar onSearch={handleSearchInput} />
+      <div className="cards-container">{productsCard}</div>
+    </>
+  );
 }
 
 export default ProductCatalog;
