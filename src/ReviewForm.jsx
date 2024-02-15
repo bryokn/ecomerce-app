@@ -1,17 +1,21 @@
 import { useState } from "react";
-import { Button, Textarea, VStack, Heading } from "@chakra-ui/react";
+import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter } from "@chakra-ui/react";
 
-function ReviewForm({ onSubmit }) {
+function ReviewForm({ onSubmit, user }) {
   const [reviewText, setReviewText] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (event) => {
     setReviewText(event.target.value);
   };
 
   const handleSubmit = () => {
-    onSubmit(reviewText);
-    setReviewText(""); 
+    onSubmit(reviewText, user);
+    setIsOpen(true);
+    setReviewText("");
   };
+
+  const onClose = () => setIsOpen(false);
 
   return (
     <VStack align="flex-start" spacing={4}>
@@ -24,6 +28,22 @@ function ReviewForm({ onSubmit }) {
       <Button colorScheme="teal" onClick={handleSubmit}>
         Submit Review
       </Button>
+
+      <AlertDialog isOpen={isOpen} onClose={onClose}>
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize="lg" fontWeight="bold">
+              Your Review has been submitted!
+            </AlertDialogHeader>
+
+            <AlertDialogFooter>
+              <Button colorScheme="teal" onClick={onClose} ml={3}>
+                Close
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
     </VStack>
   );
 }
