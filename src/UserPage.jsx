@@ -7,10 +7,9 @@ function UserPage({ user, onLogout }) {
 
   return (
     <>
-      <h2>Welcome, {user.firstName} {user.lastName}!</h2>
-      <h5>(This is your page)</h5>
-      {'Huku ni Moringa!'}
-      <button onClick={handleLogout}>Logout</button>
+      <h2>Hey there, {user.firstName} {user.lastName}!</h2>
+      {'Happy Shopping!'}
+      <button onClick={handleLogout}><br />Logout</button>
     </>
   );
 }

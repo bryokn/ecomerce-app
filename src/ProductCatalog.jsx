@@ -12,13 +12,17 @@ import {
 } from "@chakra-ui/react";
 import NavBar from "./NavBar";
 
-function ProductCatalog() {
+function ProductCatalog({ addToCart }) {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setProducts(data.liquors);
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product); // Call addToCart function with the selected product
+  };
 
   function handleSearchInput(e) {
     setSearchTerm(e.target.value.toLowerCase());
@@ -84,6 +88,7 @@ function ProductCatalog() {
                 w="200px"
                 alignItems="center"
                 justifyContent="center"
+                onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
               </Button>
@@ -94,6 +99,7 @@ function ProductCatalog() {
     </div>
   ));
 
+
   return (
     <>
       <NavBar onSearch={handleSearchInput} />
@@ -103,3 +109,4 @@ function ProductCatalog() {
 }
 
 export default ProductCatalog;
+
