@@ -1,3 +1,4 @@
+// ReviewForm.jsx
 import { useState } from "react";
 import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter } from "@chakra-ui/react";
 
@@ -10,9 +11,13 @@ function ReviewForm({ onSubmit, user }) {
   };
 
   const handleSubmit = () => {
-    onSubmit(reviewText, user);
-    setIsOpen(true);
-    setReviewText("");
+    if (user) {
+      onSubmit(reviewText, user);
+      setIsOpen(true);
+      setReviewText("");
+    } else {
+      alert("You need to log in or sign up to leave a review.");
+    }
   };
 
   const onClose = () => setIsOpen(false);
@@ -33,7 +38,7 @@ function ReviewForm({ onSubmit, user }) {
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Your Review has been submitted!
+              Your Review has been submitted
             </AlertDialogHeader>
 
             <AlertDialogFooter>
