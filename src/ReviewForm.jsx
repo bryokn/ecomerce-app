@@ -1,8 +1,7 @@
-// ReviewForm.jsx
 import { useState } from "react";
-import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter } from "@chakra-ui/react";
+import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, Divider } from "@chakra-ui/react";
 
-function ReviewForm({ onSubmit, user }) {
+function ReviewForm({ onSubmit, user, reviews }) {
   const [reviewText, setReviewText] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,23 +33,37 @@ function ReviewForm({ onSubmit, user }) {
         Submit Review
       </Button>
 
-      <AlertDialog isOpen={isOpen} onClose={onClose}>
-        <AlertDialogOverlay>
-          <AlertDialogContent>
-            <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Your Review has been submitted
-            </AlertDialogHeader>
+      {reviews && reviews.length > 0 && (
+        <>
+          <Divider />
+          <VStack align="flex-start" spacing={2}>
+            <Heading size="md">Customer Reviews</Heading>
+            {reviews.map((review, index) => (
+              <div key={index}>
+                <p><strong>{review.user}</strong>: {review.text}</p>
+                <p><em>{review.timestamp}</em></p>
+              </div>
+            ))}
+          </VStack>
+        </>
+      )}
 
-            <AlertDialogFooter>
-              <Button colorScheme="teal" onClick={onClose} ml={3}>
-                Close
-              </Button>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialogOverlay>
+      <AlertDialog isOpen={isOpen} onClose={onClose}>
+        <AlertDialogOverlay />
+        <AlertDialogContent>
+          <AlertDialogHeader fontSize="lg" fontWeight="bold">
+            Your Review has been submitted
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <Button colorScheme="teal" onClick={onClose} ml={3}>
+              Close
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
       </AlertDialog>
     </VStack>
   );
 }
 
 export default ReviewForm;
+

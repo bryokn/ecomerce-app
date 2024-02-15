@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Box, Input, Checkbox } from "@chakra-ui/react";
+import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Input, Checkbox, Flex, HStack, Spacer, Link, Box } from "@chakra-ui/react";
+import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
-function JoinCommunityButton() {
+function FooterContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,12 +32,32 @@ function JoinCommunityButton() {
   };
 
   return (
-    <>
-      <Box position="fixed" bottom="1rem" right="1rem">
-        <Button colorScheme="teal" onClick={handleOpen}>
-          Join Our Community
-        </Button>
+    <Flex as="footer" bgColor="gray.100" p={4} justify="space-between" align="center">
+      <Box>
+        <Text fontSize="sm" fontWeight="bold">Drunken Deals</Text>
+        <Text fontSize="xs">123 Company St, Nrb, Kenya</Text>
+        <Text fontSize="xs">Phone: +123 456 789</Text>
       </Box>
+
+      <HStack spacing={4}>
+        <Link href="https://www.instagram.com/" isExternal>
+          <FaInstagram style={{ fontSize: "1.5rem" }} />
+        </Link>
+        <Link href="https://www.facebook.com/" isExternal>
+          <FaFacebook style={{ fontSize: "1.5rem" }} />
+        </Link>
+        <Link href="https://twitter.com/" isExternal>
+          <FaTwitter style={{ fontSize: "1.5rem" }} />
+        </Link>
+      </HStack>
+
+      <Flex direction="column" alignItems="flex-end">
+        <Text fontSize="sm" fontWeight="bold">Join Our Community</Text>
+        <Button colorScheme="teal" onClick={handleOpen} size="sm">
+          Join Now
+        </Button>
+      </Flex>
+
       <Modal isOpen={isOpen} onClose={handleClose}>
         <ModalOverlay />
         <ModalContent>
@@ -86,10 +107,10 @@ function JoinCommunityButton() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Flex>
   );
 }
 
-export default JoinCommunityButton;
+export default FooterContent;
 
 
