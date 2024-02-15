@@ -11,7 +11,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-function NavBar({ Login, Signup }) {
+function NavBar({ onSearch }) {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const bg = useColorModeValue("blue.200", "blue.500");
@@ -48,6 +48,7 @@ function NavBar({ Login, Signup }) {
           <SearchIcon color="#f310e4" />
         </InputLeftElement>
         <Input
+          onChange={onSearch}
           type="text"
           placeholder="search for liquor..."
           bgGradient="linear(to-l, #7928CA, #FF0080)"
@@ -56,7 +57,7 @@ function NavBar({ Login, Signup }) {
         />
       </InputGroup>
       <ButtonGroup>
-        <Button colorScheme="teal" variant="solid" onClick={Login}>
+        <Button colorScheme="teal" variant="solid">
           Login
         </Button>
         <Button colorScheme="teal" variant="solid">

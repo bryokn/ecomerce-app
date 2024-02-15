@@ -10,16 +10,29 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import NavBar from "./NavBar";
 
 function ProductCatalog() {
   const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setProducts(data.liquors);
   }, []);
 
-  const productsCard = products.map((product) => (
-    <div className="card">
+  function handleSearchInput(e) {
+    setSearchTerm(e.target.value.toLowerCase());
+  }
+
+  const filteredProducts = products.filter(
+    (product) =>
+      product.brand.toLowerCase().includes(searchTerm) ||
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.type.toLowerCase().includes(searchTerm)
+  );
+
+  const productsCard = filteredProducts.map((product) => (
+    <div className="card" key={product.id}>
       <div className="card-inner">
         <div className="card-front">
           <Heading
@@ -79,65 +92,14 @@ function ProductCatalog() {
         </div>
       </div>
     </div>
-    // <Card
-    //   mb={4}
-    //   bg={bg}
-    //   color={color}
-    //   className="cards"
-    //   maxW="sm"
-    //   key={product.id}
-    //   borderWidth="1px"
-    //   borderRadius="lg"
-    //   borderColor="blue"
-    //   overflow="hidden"
-    //   width="250px"
-    //   margin="1rem"
-    //   alignItems="center"
-    //   justifyContent="center"
-    // >
-    //   <CardBody>
-    //     <Heading
-    //       bgGradient="linear(to-l, #7928CA, #FF0080)"
-    //       bgClip="text"
-    //       fontWeight="extrabold"
-    //       size="md"
-    //     >
-    //       {product.brand}
-    //     </Heading>
-    //     <Text color="black">Type: {product.type}</Text>
-    //     <Flex w="100%" h="350px">
-    //       <Image
-    //         src={product.image_url}
-    //         alt={product.name}
-    //         borderRadius="lg"
-    //         objectFit="cover"
-    //         w={"100vw"}
-    //       />
-    //     </Flex>
-    //     <Stack mt="6" spacing="0">
-    //       <Text color="black">Volume: {product.volume_ml}</Text>
-    //       <Text color="green">Price: {product.price_usd}</Text>
-    //       <Text color="black">Quantity: {product.quantity}</Text>
-    //     </Stack>
-    //   </CardBody>
-    //   <Divider />
-    //   <CardFooter>
-    //     <ButtonGroup spacing="2">
-    //       <Button
-    //         variant="solid"
-    //         colorScheme="red"
-    //         w="200px"
-    //         alignItems="center"
-    //         justifyContent="center"
-    //       >
-    //         Add to Cart
-    //       </Button>
-    //     </ButtonGroup>
-    //   </CardFooter>
-    // </Card>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;
+  return (
+    <>
+      <NavBar onSearch={handleSearchInput} />
+      <div className="cards-container">{productsCard}</div>
+    </>
+  );
 }
 
 export default ProductCatalog;

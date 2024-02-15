@@ -56,7 +56,7 @@ function App() {
     <ChakraProvider>
 
       <>
-        <NavBar login={Login} signUp={Signup} />
+        {/* <NavBar login={Login} signUp={Signup} /> */}
         <h1>Welcome!!</h1>
         <p>
           Our Motto is: Everyday is a weekend is you're brave enough! Cheers
