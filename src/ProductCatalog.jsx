@@ -1,3 +1,4 @@
+// ProductCatalog.jsx
 import React, { useEffect, useState } from "react";
 import data from "../db.json";
 import {
@@ -21,7 +22,8 @@ function ProductCatalog({ addToCart }) {
   }, []);
 
   const handleAddToCart = (product) => {
-    addToCart(product); 
+    addToCart(product); // Call addToCart function with the selected product
+    console.log("Cart items:", cartItems);
   };
 
   function handleSearchInput(e) {
