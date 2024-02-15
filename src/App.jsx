@@ -7,6 +7,7 @@ import { Login, Signup } from "./AuthForms";
 import UserPage from "./UserPage";
 import ReviewForm from "./ReviewForm";
 import JoinCommunityButton from "./JoinCommunity"; 
+import SocialMediaIcons from "./socialMediaIcons";
 
 function AuthButtons({ openLoginModal, openSignupModal }) {
   return (
@@ -97,7 +98,7 @@ function App() {
             <p><em>{review.timestamp}</em></p>
           </div>
         ))}
-        
+        <SocialMediaIcons />
         <JoinCommunityButton />
       </>
     </ChakraProvider>

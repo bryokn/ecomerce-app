@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Box } from "@chakra-ui/react";
+import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Box, Input } from "@chakra-ui/react";
 
 function JoinCommunityButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -10,6 +13,16 @@ function JoinCommunityButton() {
 
   const handleClose = () => {
     setIsOpen(false);
+  };
+
+  const handleApplyNow = () => {
+    
+    if (!name || !email) {
+      alert("Please enter your name and email address.");
+      return;
+    }
+
+    setSuccessMessage("Application successful! We'll get back to you.");
   };
 
   return (
@@ -25,12 +38,35 @@ function JoinCommunityButton() {
           <ModalHeader textAlign="center">Let’s work together!</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <VStack spacing={4} align="stretch">
-              <Text fontSize="lg" textAlign="center">
-                Are you an influencer or a content creator? Join our influencer affiliate program and earn today.
+            {successMessage ? (
+              <Text fontSize="lg" textAlign="center" color="green.500">
+                {successMessage}
               </Text>
-              <Button colorScheme="teal" size="lg" width="100%">Apply now</Button>
-            </VStack>
+            ) : (
+              <>
+                <VStack spacing={4} align="stretch">
+                  <Input
+                    placeholder="Your Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <Input
+                    placeholder="Your Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </VStack>
+                <Button
+                  colorScheme="teal"
+                  size="lg"
+                  width="100%"
+                  mt="4"
+                  onClick={handleApplyNow}
+                >
+                  Apply now
+                </Button>
+              </>
+            )}
           </ModalBody>
           <ModalFooter justifyContent="center">
             <Button colorScheme="teal" onClick={handleClose}>
