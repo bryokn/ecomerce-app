@@ -9,7 +9,7 @@ function UserPage({ user, onLogout }) {
     <>
       <h2>Welcome, {user.firstName} {user.lastName}!</h2>
       <h5>(This is your page)</h5>
-      {/* Add user-specific content here */}
+      {'Huku ni Moringa!'}
       <button onClick={handleLogout}>Logout</button>
     </>
   );

@@ -13,6 +13,7 @@ import { Formik,
     ErrorMessage } from 'formik';
 import usersData from '../users.json';
 
+
 function Login({ isOpen, onClose, setUser }) {
   const [error, setError] = useState(null);
 
@@ -31,7 +32,7 @@ function Login({ isOpen, onClose, setUser }) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Login</ModalHeader>
+        <ModalHeader>Enter your details below</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Formik
@@ -80,7 +81,7 @@ function Signup({ isOpen, onClose, setUser }) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Sign Up</ModalHeader>
+        <ModalHeader>Let's create your account</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Formik

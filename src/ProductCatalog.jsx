@@ -7,6 +7,7 @@ import {
   CardBody,
   CardFooter,
   Divider,
+  Flex,
   Heading,
   Image,
   Stack,
@@ -33,16 +34,24 @@ function ProductCatalog() {
       margin="1rem"
       alignItems="center"
       justifyContent="center"
-      background="#eaf6ff"
+      background="#eaf6ffi"
     >
       <CardBody>
         <Heading size="md">Name: {product.name}</Heading>
         <Text color="black">Type: {product.type}</Text>
-        <Image src={product.image_url} alt={product.name} borderRadius="lg" />
+        <Flex w="100%" h="350px">
+          <Image
+            src={product.image_url}
+            alt={product.name}
+            borderRadius="lg"
+            objectFit="cover"
+            w={"100vw"}
+          />
+        </Flex>
         <Stack mt="6" spacing="0">
           <Text color="black">Volume: {product.volume_ml}</Text>
           <Text color="green">Price: {product.price_usd}</Text>
-          <Text color="red">Quantity: {product.quantity}</Text>
+          <Text color="black">Quantity: {product.quantity}</Text>
         </Stack>
       </CardBody>
       <Divider />
@@ -62,7 +71,6 @@ function ProductCatalog() {
     </Card>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;
-}
+  return <div className="cards-container">{productsCard}</div>;}
 
 export default ProductCatalog;
