@@ -14,12 +14,16 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-function ProductCatalog() {
+function ProductCatalog({ addToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     setProducts(data.liquors);
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product); // Call addToCart function with the selected product
+  };
 
   const productsCard = products.map((product) => (
     <Card
@@ -63,6 +67,7 @@ function ProductCatalog() {
             w="200px"
             alignItems="center"
             justifyContent="center"
+            onClick={() => handleAddToCart(product)}
           >
             Add to Cart
           </Button>
@@ -71,6 +76,8 @@ function ProductCatalog() {
     </Card>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;}
+  return <div className="cards-container">{productsCard}</div>;
+}
 
 export default ProductCatalog;
+
