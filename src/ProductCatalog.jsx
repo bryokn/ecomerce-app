@@ -2,24 +2,17 @@ import React, { useEffect, useState } from "react";
 import data from "../db.json";
 import {
   Button,
-  ButtonGroup,
   Card,
   CardBody,
-  CardFooter,
-  Divider,
   Flex,
   Heading,
   Image,
   Stack,
   Text,
-  useColorMode,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 function ProductCatalog() {
   const [products, setProducts] = useState([]);
-
-  const { colorMode, toggleColorMode } = useColorMode();
 
   useEffect(() => {
     setProducts(data.liquors);
@@ -144,8 +137,7 @@ function ProductCatalog() {
     // </Card>
   ));
 
-  return <div className="cards-container">{productsCard}</div>;}
-
-export default ProductCatalog;
+  return <div className="cards-container">{productsCard}</div>;
+}
 
 export default ProductCatalog;
