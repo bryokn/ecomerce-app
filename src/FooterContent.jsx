@@ -1,12 +1,30 @@
-import { useState } from "react";
-import { Button, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text, Input, Checkbox, Flex, HStack, Spacer, Link, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Button,
+  VStack,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Text,
+  Input,
+  Checkbox,
+  Flex,
+  HStack,
+  Spacer,
+  Link,
+  Box,
+} from "@chakra-ui/react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
-function FooterContent() {
+function FooterComponent() {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [isAbove18, setIsAbove18] = useState(false); 
+  const [isAbove18, setIsAbove18] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleOpen = () => {
@@ -32,27 +50,38 @@ function FooterContent() {
   };
 
   return (
-    <Flex as="footer" bgColor="gray.100" p={4} justify="space-between" align="center">
+    <Flex
+      as="footer"
+      bgColor="gray.800"
+      p={4}
+      justify="space-between"
+      align="center"
+      direction={{ base: "column", md: "row" }}
+    >
       <Box>
-        <Text fontSize="sm" fontWeight="bold">Drunken Deals</Text>
-        <Text fontSize="xs">123 Company St, Nrb, Kenya</Text>
-        <Text fontSize="xs">Phone: +123 456 789</Text>
+        <Text fontSize="sm" fontWeight="bold" color="white">
+          Company Name
+        </Text>
+        <Text fontSize="xs" color="white">123 Company St, City, Country</Text>
+        <Text fontSize="xs" color="white">Phone: +123 456 789</Text>
       </Box>
 
-      <HStack spacing={4}>
+      <HStack spacing={4} mt={{ base: 4, md: 0 }}>
         <Link href="https://www.instagram.com/" isExternal>
-          <FaInstagram style={{ fontSize: "1.5rem" }} />
+          <FaInstagram boxSize={6} color="white" />
         </Link>
         <Link href="https://www.facebook.com/" isExternal>
-          <FaFacebook style={{ fontSize: "1.5rem" }} />
+          <FaFacebook boxSize={6} color="white" />
         </Link>
         <Link href="https://twitter.com/" isExternal>
-          <FaTwitter style={{ fontSize: "1.5rem" }} />
+          <FaTwitter boxSize={6} color="white" />
         </Link>
       </HStack>
 
-      <Flex direction="column" alignItems="flex-end">
-        <Text fontSize="sm" fontWeight="bold">Join Our Community</Text>
+      <Flex direction="column" alignItems="flex-end" mt={{ base: 4, md: 0 }}>
+        <Text fontSize="sm" fontWeight="bold" color="white">
+          Join Our Community
+        </Text>
         <Button colorScheme="teal" onClick={handleOpen} size="sm">
           Join Now
         </Button>
@@ -111,6 +140,4 @@ function FooterContent() {
   );
 }
 
-export default FooterContent;
-
-
+export default FooterComponent;
