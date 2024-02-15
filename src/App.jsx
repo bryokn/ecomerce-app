@@ -54,9 +54,7 @@ function App() {
 
   return (
     <ChakraProvider>
-
       <>
-        {/* <NavBar login={Login} signUp={Signup} /> */}
         <h1>Welcome!!</h1>
         <p>
           Our Motto is: Everyday is a weekend is you're brave enough! Cheers
@@ -97,6 +95,7 @@ function App() {
             <p>
               <em>{review.timestamp}</em>
             </p>
+            
           </div>
         ))}
       </>

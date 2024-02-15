@@ -18,53 +18,55 @@ function NavBar({ onSearch }) {
   const color = useColorModeValue("gray.800", "white");
 
   return (
-    <Box className="navbar" mb={4} bg={bg} color={color}>
-      <Button onClick={toggleColorMode} variant="ghost">
-        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-      </Button>
-      <Heading
-        bgGradient="linear(to-l, #7928CA, #FF0080)"
-        bgClip="text"
-        fontWeight="extrabold"
-        size="md"
-        fontSize="2rem"
-      >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src="https://i.pinimg.com/474x/8a/74/10/8a741009f63f8d61e97517f83a4b8131.jpg"
-            alt="Icon"
-            style={{
-              marginRight: "10px",
-              width: "30px",
-              height: "30px",
-              borderRadius: "50%",
-            }}
-          />
-          The Liqour Cave
-        </div>
-      </Heading>
-      <InputGroup marginY={"10"} w={"70"}>
-        <InputLeftElement pointerEvents="none" marginRight={"4"}>
-          <SearchIcon color="#f310e4" />
-        </InputLeftElement>
-        <Input
-          onChange={onSearch}
-          type="text"
-          placeholder="search for liquor..."
+    <>
+      <Box className="navbar" mb={4} bg={bg} color={color}>
+        <Button onClick={toggleColorMode} variant="ghost">
+          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        </Button>
+        <Heading
           bgGradient="linear(to-l, #7928CA, #FF0080)"
           bgClip="text"
           fontWeight="extrabold"
-        />
-      </InputGroup>
-      <ButtonGroup>
-        <Button colorScheme="teal" variant="solid">
-          Login
-        </Button>
-        <Button colorScheme="teal" variant="solid">
-          Sign Up
-        </Button>
-      </ButtonGroup>
-    </Box>
+          size="md"
+          fontSize="2rem"
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src="https://i.pinimg.com/474x/8a/74/10/8a741009f63f8d61e97517f83a4b8131.jpg"
+              alt="Icon"
+              style={{
+                marginRight: "10px",
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+              }}
+            />
+            The Liquor Cave
+          </div>
+        </Heading>
+        <InputGroup marginY={"10"} w={"70"}>
+          <InputLeftElement pointerEvents="none" marginRight={"4"}>
+            <SearchIcon color="#f310e4" />
+          </InputLeftElement>
+          <Input
+            onChange={onSearch}
+            type="text"
+            placeholder="search for liquor..."
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            bgClip="text"
+            fontWeight="extrabold"
+          />
+        </InputGroup>
+        <ButtonGroup>
+          <Button colorScheme="teal" variant="solid">
+            Login
+          </Button>
+          <Button colorScheme="teal" variant="solid">
+            Sign Up
+          </Button>
+        </ButtonGroup>
+      </Box>
+    </>
   );
 }
 
