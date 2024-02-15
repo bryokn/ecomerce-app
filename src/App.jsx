@@ -3,7 +3,6 @@ import {
   Button,
   Stack,
   ChakraProvider,
-  ColorModeScript,
   Divider,
 } from "@chakra-ui/react";
 
