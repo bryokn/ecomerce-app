@@ -64,12 +64,11 @@ function App() {
   return (
     <ChakraProvider>
       <>
-        <h1>Liquor Cave</h1>
-        <h2>
+        <h1>
           Everyday is a weekend if you're brave enough!
           <br />
           Cheers!!
-        </h2>
+        </h1>
         <Stack direction="row" spacing={4}>
           <AuthButtons
             openLoginModal={openLoginModal}
