@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, Divider } from "@chakra-ui/react";
+import { Button, Textarea, VStack, Heading, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, Divider, Box } from "@chakra-ui/react";
 
 function ReviewForm({ onSubmit, user, reviews }) {
   const [reviewText, setReviewText] = useState("");
@@ -36,15 +36,17 @@ function ReviewForm({ onSubmit, user, reviews }) {
       {reviews && reviews.length > 0 && (
         <>
           <Divider />
-          <VStack align="flex-start" spacing={2}>
-            <Heading size="md">Customer Reviews</Heading>
-            {reviews.map((review, index) => (
-              <div key={index}>
-                <p><strong>{review.user}</strong>: {review.text}</p>
-                <p><em>{review.timestamp}</em></p>
-              </div>
-            ))}
-          </VStack>
+          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md">
+            <VStack align="flex-start" spacing={2} p={4}>
+              <Heading size="md">Customer Reviews</Heading>
+              {reviews.map((review, index) => (
+                <Box key={index} borderWidth="1px" borderRadius="md" p={2}>
+                  <p><strong>{review.user}</strong>: {review.text}</p>
+                  <p><em>{review.timestamp}</em></p>
+                </Box>
+              ))}
+            </VStack>
+          </Box>
         </>
       )}
 

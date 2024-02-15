@@ -58,13 +58,21 @@ function FooterComponent() {
       align="center"
       direction={{ base: "column", md: "row" }}
     >
+
       <Box>
-        <Text fontSize="sm" fontWeight="bold" color="white">
-          Company Name
-        </Text>
-        <Text fontSize="xs" color="white">123 Company St, City, Country</Text>
-        <Text fontSize="xs" color="white">Phone: +123 456 789</Text>
-      </Box>
+  <Text fontSize="sm" fontWeight="bold" color="teal">
+    About Us!
+  </Text>
+  <Text fontSize="xs" color="white">
+    At Drunken Deals, we're all about good vibes and great deals.
+  </Text>
+  <Text fontSize="xs" color="white">
+    Based in Nairobi, we specialize in offering a curated selection of the finest alcoholic beverages.
+  </Text>
+  <Text fontSize="xs" color="white">
+    From premium spirits to craft beers, we've got everything you need to elevate your drinking experience!
+  </Text>
+  </Box>
 
       <HStack spacing={4} mt={{ base: 4, md: 0 }}>
         <Link href="https://www.instagram.com/" isExternal>
@@ -87,6 +95,7 @@ function FooterComponent() {
         </Button>
       </Flex>
 
+     
       <Modal isOpen={isOpen} onClose={handleClose}>
         <ModalOverlay />
         <ModalContent>
@@ -141,3 +150,4 @@ function FooterComponent() {
 }
 
 export default FooterComponent;
+
