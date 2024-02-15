@@ -1,12 +1,19 @@
 import { useState } from "react";
-import { Button, useColorMode, Stack, ChakraProvider, ColorModeScript, Divider } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  Button,
+  useColorMode,
+  Stack,
+  ChakraProvider,
+  ColorModeScript,
+  Divider,
+} from "@chakra-ui/react";
 import "./App.css";
 import ProductCatalog from "./ProductCatalog";
 import { Login, Signup } from "./AuthForms";
 import UserPage from "./UserPage";
 import ReviewForm from "./ReviewForm";
 import FooterContent from "./FooterContent";
+import NavBar from "./NavBar";
 
 
 function AuthButtons({ openLoginModal, openSignupModal }) {
@@ -19,16 +26,6 @@ function AuthButtons({ openLoginModal, openSignupModal }) {
         Sign Up
       </Button>
     </Stack>
-  );
-}
-
-function ThemeToggleButton() {
-  const { colorMode, toggleColorMode } = useColorMode();
-
-  return (
-    <Button onClick={toggleColorMode} variant="ghost">
-      {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-    </Button>
   );
 }
 
@@ -45,7 +42,18 @@ function App() {
   const handleLogout = () => setUser(null);
 
   const handleReviewSubmit = (reviewText, user) => {
+
     if (!user) {
+    console.log("Review submitted:", reviewText, "User:", user);
+    if (user) {
+      const newReview = {
+        user: user.firstName + " " + user.lastName, 
+        text: reviewText,
+        timestamp: new Date().toISOString(),
+      };
+      setReviews(prevReviews => [...prevReviews, newReview]);
+
+    } else {
       alert("You need to log in or sign up to leave a review.");
       return;
     }
@@ -63,20 +71,24 @@ function App() {
 
   return (
     <ChakraProvider>
-      <ColorModeScript initialColorMode="light" />
       <>
         <h1>Welcome!!</h1>
-        <p>Our Motto is: Everyday is a weekend if you're brave enough! Cheers</p>
+        <p>
+          Our Motto is: Everyday is a weekend if you're brave enough! Cheers
+        </p>
 
         <Stack direction="row" spacing={4}>
           <AuthButtons
             openLoginModal={openLoginModal}
             openSignupModal={openSignupModal}
           />
-          <ThemeToggleButton />
         </Stack>
 
-        <Login isOpen={loginIsOpen} onClose={closeLoginModal} setUser={setUser} />
+        <Login
+          isOpen={loginIsOpen}
+          onClose={closeLoginModal}
+          setUser={setUser}
+        />
         <Signup
           isOpen={signupIsOpen}
           onClose={closeSignupModal}
@@ -94,8 +106,13 @@ function App() {
         <h2>Customer Reviews</h2>
         {reviews.map((review, index) => (
           <div key={index}>
-            <p><strong>{review.user}</strong>: {review.text}</p>
-            <p><em>{review.timestamp}</em></p>
+            <p>
+              <strong>{review.user}</strong>: {review.text}
+            </p>
+            <p>
+              <em>{review.timestamp}</em>
+            </p>
+            
           </div>
         ))}
          <FooterContent />
