@@ -49,6 +49,49 @@ h1 {
   border-radius: 15px;
 }
 
+/* app.css */
+
+/* Footer Styles */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+footer:hover {
+  transform: translateY(-5px);
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+footer .social-icons a {
+  color: #ffffff;
+}
+
+footer .social-icons a:hover {
+  color: #00ff00;
+}
+
+footer .apply-button {
+  text-align: right;
+}
+
+footer .apply-button button {
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer .apply-button button:hover {
+  background-color: #ff6347;
+
 .buttons {
   float: left;
   display: block;
@@ -139,4 +182,5 @@ h1 {
   white-space: nowrap;
   position: relative;
   width: 100%;
+
 }

@@ -12,7 +12,9 @@ import ProductCatalog from "./ProductCatalog";
 import { Login, Signup } from "./AuthForms";
 import UserPage from "./UserPage";
 import ReviewForm from "./ReviewForm";
+import FooterContent from "./FooterContent";
 import NavBar from "./NavBar";
+
 
 function AuthButtons({ openLoginModal, openSignupModal }) {
   return (
@@ -40,6 +42,8 @@ function App() {
   const handleLogout = () => setUser(null);
 
   const handleReviewSubmit = (reviewText, user) => {
+
+    if (!user) {
     console.log("Review submitted:", reviewText, "User:", user);
     if (user) {
       const newReview = {
@@ -51,7 +55,18 @@ function App() {
 
     } else {
       alert("You need to log in or sign up to leave a review.");
+      return;
     }
+
+    console.log("Review submitted:", reviewText, "User:", user);
+
+    const newReview = {
+      user: user.firstName + " " + user.lastName,
+      text: reviewText,
+      timestamp: new Date().toISOString(),
+    };
+
+    setReviews(prevReviews => [...prevReviews, newReview]);
   };
 
   return (
@@ -100,9 +115,11 @@ function App() {
             
           </div>
         ))}
+         <FooterContent />
       </>
     </ChakraProvider>
   );
-} 
+}
 
 export default App;
+
