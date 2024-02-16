@@ -35,7 +35,7 @@ function CartButton({ cartCount, selectedProducts, clearCart }) {
 
   return (
     <>
-      <Button className="cart" colorScheme="blue" variant="solid" onClick={onOpen}>
+      <Button id="cart" colorScheme="blue" variant="solid" onClick={onOpen}>
         Cart <Badge ml={1} colorScheme="red">{cartCount}</Badge>
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>

@@ -187,9 +187,12 @@ footer .apply-button button:hover {
   width: 100%;
 }
 
-.cart {
+#cart {
   position: fixed;
-  left: 0;
+  top: 5px;
+  left: 7px;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 .stack {
