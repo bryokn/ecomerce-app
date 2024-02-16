@@ -1,11 +1,5 @@
-// Import useState and useEffect
-import React, { useState, useEffect } from "react";
-import {
-  Button,
-  Stack,
-  ChakraProvider,
-  Divider,
-} from "@chakra-ui/react";
+import { useState } from "react";
+import { Button, Stack, ChakraProvider, Divider } from "@chakra-ui/react";
 
 import "./App.css";
 import ProductCatalog from "./ProductCatalog";
@@ -16,7 +10,6 @@ import CartButton from "./CartButton";
 import FooterContent from "./FooterContent";
 import NavBar from "./NavBar";
 
-
 function AuthButtons({ openLoginModal, openSignupModal, cartCount }) {
   return (
     <Stack direction="row" spacing={4} id="login">
@@ -26,9 +19,7 @@ function AuthButtons({ openLoginModal, openSignupModal, cartCount }) {
       <Button colorScheme="teal" variant="solid" onClick={openSignupModal}>
         Sign Up
       </Button>
-      {/* Render CartButton component here */}
       <CartButton cartCount={cartCount} selectedProducts={[]} />
-      
     </Stack>
   );
 }
@@ -67,17 +58,17 @@ function App() {
   return (
     <ChakraProvider>
       <>
-        <h2><i>
-          Everyday is a weekend if you&apos;re brave enough!
+        <CartButton className="cart" cartCount={cartItems.length} selectedProducts={cartItems} />
+        <h1>
+          Everyday is a weekend if you're brave enough!
           <br />
-          Cheers!!</i>
-        </h2>
-        <Stack direction="row" spacing={4}>
+          Cheers!!
+        </h1>
+        <Stack className="stack" direction="row" spacing={4}>
           <AuthButtons
             openLoginModal={openLoginModal}
             openSignupModal={openSignupModal}
-            // Pass cartItems length as cartCount
-            cartCount={cartItems.length}
+            // cartCount={cartItems.length}
           />
         </Stack>
         {user ? (
@@ -96,7 +87,6 @@ function App() {
             />
           </>
         )}
-        {/* Pass addToCart function to ProductCatalog */}
         <ProductCatalog addToCart={addToCart} />
         <Divider />
         <ReviewForm onSubmit={handleReviewSubmit} user={user} />
@@ -112,8 +102,6 @@ function App() {
             </p>
           </div>
         ))}
-        {/* Pass cartItems to CartButton */}
-        <CartButton cartCount={cartItems.length} selectedProducts={cartItems} />
         <FooterContent />
       </>
     </ChakraProvider>
@@ -121,5 +109,3 @@ function App() {
 }
 
 export default App;
-
-

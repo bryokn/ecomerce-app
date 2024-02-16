@@ -20,7 +20,7 @@ h1 {
   font-size: x-large;
   font-weight: 1000;
 }
-.App h2{
+.App h2 {
   color: #333333;
 }
 .sign {
@@ -185,4 +185,17 @@ footer .apply-button button:hover {
   white-space: nowrap;
   position: relative;
   width: 100%;
+}
+
+.cart {
+  position: fixed;
+  left: 0;
+}
+
+.stack {
+  position: fixed;
+  right: 2px;
+  top: 5px;
+  overflow: hidden;
+  z-index: 9999;
 }

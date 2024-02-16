@@ -22,6 +22,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import usersData from "../users.json";
+import CartButton from "./CartButton";
 
 function NavBar({ onSearch }) {
   const [loginIsOpen, setLoginIsOpen] = useState(false);
@@ -105,14 +106,25 @@ function NavBar({ onSearch }) {
           />
         </InputGroup>
         <ButtonGroup>
-          <Button colorScheme="teal" variant="solid" onClick={() => setLoginIsOpen(true)}>
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            onClick={() => setLoginIsOpen(true)}
+          >
             Login
           </Button>
-          <Button colorScheme="teal" variant="solid" onClick={() => setSignupIsOpen(true)}>
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            onClick={() => setSignupIsOpen(true)}
+          >
             Sign Up
           </Button>
         </ButtonGroup>
+        {/* <CartButton cartCount={cartItems.length} selectedProducts={cartItems} /> */}
       </Box>
+      {/* <CartButton cartCount={cartItems.length} selectedProducts={cartItems} /> */}
+      
 
       {/* Login Modal */}
       <Modal isOpen={loginIsOpen} onClose={() => setLoginIsOpen(false)}>
@@ -129,17 +141,31 @@ function NavBar({ onSearch }) {
                 <Form>
                   <Field type="email" name="email" placeholder="Email" />
                   <br /> <br />
-                  <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
-                  <Field type="password" name="password" placeholder="Password" />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    style={{ color: "red" }}
+                  />
+                  <Field
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
                   <br /> <br />
-                  <ErrorMessage name="password" component="div" style={{ color: 'red' }} />
-                  <Button type="submit" isLoading={isSubmitting}>Login</Button>
+                  <ErrorMessage
+                    name="password"
+                    component="div"
+                    style={{ color: "red" }}
+                  />
+                  <Button type="submit" isLoading={isSubmitting}>
+                    Login
+                  </Button>
                 </Form>
               )}
             </Formik>
             {error && <div style={{ color: "red" }}>{error}</div>}
           </ModalBody>
-          <ModalFooter>{'Bottoms Up!!'}</ModalFooter>
+          <ModalFooter>{"Bottoms Up!!"}</ModalFooter>
         </ModalContent>
       </Modal>
 
@@ -151,11 +177,17 @@ function NavBar({ onSearch }) {
           <ModalCloseButton />
           <ModalBody>
             <Formik
-              initialValues={{ firstName: '', lastName: '', email: '', password: '', confirmPassword: '' }}
+              initialValues={{
+                firstName: "",
+                lastName: "",
+                email: "",
+                password: "",
+                confirmPassword: "",
+              }}
               validate={(values) => {
                 const errors = {};
                 if (values.password !== values.confirmPassword) {
-                  errors.confirmPassword = 'Passwords do not match';
+                  errors.confirmPassword = "Passwords do not match";
                 }
                 return errors;
               }}
@@ -163,18 +195,36 @@ function NavBar({ onSearch }) {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <Field type="text" name="firstName" placeholder="First Name" />
+                  <Field
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                  />
                   <br /> <br />
                   <Field type="text" name="lastName" placeholder="Last Name" />
-                  <br />  <br />
+                  <br /> <br />
                   <Field type="email" name="email" placeholder="Email" />
                   <br /> <br />
-                  <Field type="password" name="password" placeholder="Password" />
+                  <Field
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
                   <br /> <br />
-                  <Field type="password" name="confirmPassword" placeholder="Confirm Password" />
+                  <Field
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                  />
                   <br /> <br />
-                  <ErrorMessage name="confirmPassword" component="div" style={{ color: 'red' }} />
-                  <Button type="submit" isLoading={isSubmitting}>Sign Up</Button>
+                  <ErrorMessage
+                    name="confirmPassword"
+                    component="div"
+                    style={{ color: "red" }}
+                  />
+                  <Button type="submit" isLoading={isSubmitting}>
+                    Sign Up
+                  </Button>
                 </Form>
               )}
             </Formik>
@@ -187,9 +237,6 @@ function NavBar({ onSearch }) {
 }
 
 export default NavBar;
-
-
-
 
 /**import React, { useState } from "react";
 import {
@@ -381,8 +428,6 @@ function NavBar({ onSearch }) {
 
 export default NavBar;
 **/
-
-
 
 /**import {
   Box,
