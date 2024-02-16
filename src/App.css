@@ -194,7 +194,7 @@ footer .apply-button button:hover {
 
 .stack {
   position: fixed;
-  right: 2px;
+  right: 30px;
   top: 5px;
   overflow: hidden;
   z-index: 9999;

@@ -106,7 +106,7 @@ function NavBar({ onSearch }) {
           />
         </InputGroup>
         <ButtonGroup>
-          <Button
+          {/* <Button
             colorScheme="teal"
             variant="solid"
             onClick={() => setLoginIsOpen(true)}
@@ -119,7 +119,7 @@ function NavBar({ onSearch }) {
             onClick={() => setSignupIsOpen(true)}
           >
             Sign Up
-          </Button>
+          </Button> */}
         </ButtonGroup>
         {/* <CartButton cartCount={cartItems.length} selectedProducts={cartItems} /> */}
       </Box>
