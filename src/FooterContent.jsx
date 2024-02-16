@@ -64,7 +64,7 @@ function FooterComponent() {
     About Us!
   </Text>
   <Text fontSize="xs" color="white">
-    At Drunken Deals, we're all about good vibes and great deals.
+    At The Liqour Cave, we're all about good vibes and great deals.
   </Text>
   <Text fontSize="xs" color="white">
     Based in Nairobi, we specialize in offering a curated selection of the finest alcoholic beverages.
