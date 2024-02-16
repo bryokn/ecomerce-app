@@ -81,7 +81,7 @@ function Signup({ isOpen, onClose, setUser }) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Let's create your account</ModalHeader>
+        <ModalHeader>Let&apos;s create your account</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Formik
@@ -116,4 +116,4 @@ function Signup({ isOpen, onClose, setUser }) {
   );
 }
 
-export { Login, Signup };
+export { Login, Signup }; 

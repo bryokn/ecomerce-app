@@ -1,3 +1,4 @@
+// ProductCatalog.jsx
 import React, { useEffect, useState } from "react";
 import data from "../db.json";
 import {
@@ -22,6 +23,7 @@ function ProductCatalog({ addToCart }) {
 
   const handleAddToCart = (product) => {
     addToCart(product); // Call addToCart function with the selected product
+    console.log("Cart items:", cartItems);
   };
 
   function handleSearchInput(e) {
@@ -78,8 +80,8 @@ function ProductCatalog({ addToCart }) {
                 />
               </Flex>
 
-              <Text colorScheme="black">Volume: {product.volume_ml}</Text>
-              <Text colorScheme="black">Price: {product.price_usd}</Text>
+              <Text colorScheme="black">Volume: {product.volume_ml}ml</Text>
+              <Text colorScheme="black">Price: $ {product.price_usd}</Text>
               <Text colorScheme="black">Quantity: {product.quantity}</Text>
 
               <Button
@@ -99,7 +101,6 @@ function ProductCatalog({ addToCart }) {
     </div>
   ));
 
-
   return (
     <>
       <NavBar onSearch={handleSearchInput} />
@@ -109,4 +110,3 @@ function ProductCatalog({ addToCart }) {
 }
 
 export default ProductCatalog;
-
