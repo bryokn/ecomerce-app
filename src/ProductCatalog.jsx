@@ -82,7 +82,9 @@ function ProductCatalog({ addToCart }) {
 
               <Text colorScheme="black">Volume: {product.volume_ml}ml</Text>
               <Text colorScheme="black">Price: $ {product.price_usd}</Text>
-              <Text colorScheme="black">Quantity: {product.quantity}</Text>
+              <Text colorScheme="green">
+                {product.availability}
+              </Text>
 
               <Button
                 variant="solid"
