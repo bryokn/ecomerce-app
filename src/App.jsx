@@ -19,7 +19,7 @@ function AuthButtons({ openLoginModal, openSignupModal, cartCount }) {
       <Button colorScheme="teal" variant="solid" onClick={openSignupModal}>
         Sign Up
       </Button>
-      <CartButton cartCount={cartCount} selectedProducts={[]} />
+      {/**<CartButton cartCount={cartCount} selectedProducts={[]} />**/}
     </Stack>
   );
 }
