@@ -39,3 +39,5 @@ Contributing <br>
     5. Push to the branch (git push origin feature/improvement). <br>
     6. Create a new Pull Request.
 
+
+Trello Board Live Link: https://trello.com/b/FbG9TFfM/ecommerce-app
