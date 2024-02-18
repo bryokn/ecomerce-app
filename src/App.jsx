@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button, Stack, ChakraProvider, Divider } from "@chakra-ui/react";
-
 import "./App.css";
 import ProductCatalog from "./ProductCatalog";
 import { Login, Signup } from "./AuthForms";
@@ -36,6 +35,10 @@ function App() {
   const closeSignupModal = () => setSignupIsOpen(false);
   const handleLogout = () => setUser(null);
 
+  const removeFromCart = (updatedProducts) => {
+    setCartItems(updatedProducts);
+  };
+
   const handleReviewSubmit = (reviewText, user) => {
     if (!user) {
       alert("You need to log in or sign up to leave a review.");
@@ -57,12 +60,12 @@ function App() {
   return (
     <ChakraProvider>
       <>
-        <CartButton className="cart" cartCount={cartItems.length} selectedProducts={cartItems} />
-        <h1>
-          Everyday is a weekend if you're brave enough!
+        <CartButton className="cart" cartCount={cartItems.length} selectedProducts={cartItems} removeFromCart={removeFromCart}/>
+        <p>
+          Everyday is a weekend if you&apos;re brave enough!
           <br />
           Cheers!!
-        </h1>
+        </p>
         <Stack className="stack" direction="row" spacing={4}>
           <AuthButtons
             openLoginModal={openLoginModal}

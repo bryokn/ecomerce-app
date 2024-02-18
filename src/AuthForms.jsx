@@ -43,7 +43,7 @@ function Login({ isOpen, onClose, setUser }) {
               <Form>
                 <Field type="email" name="email" placeholder="Email" /><br /><br />
                 <Field type="password" name="password" placeholder="Password" /><br /><br />
-                <Button type="submit" isLoading={isSubmitting}>Login</Button>
+                <Button colorScheme='teal' type="submit" isLoading={isSubmitting}>Login</Button>
               </Form>
             )}
           </Formik>
@@ -103,7 +103,7 @@ function Signup({ isOpen, onClose, setUser }) {
                 <Field type="password" name="password" placeholder="Password" /><br /><br />
                 <Field type="password" name="confirmPassword" placeholder="Confirm Password" /><br /><br />
                 <ErrorMessage name="confirmPassword" component="div" style={{ color: 'red' }} />
-                <Button type="submit" isLoading={isSubmitting}>Sign Up</Button>
+                <Button colorScheme='teal' type="submit" isLoading={isSubmitting}>Sign Up</Button>
               </Form>
             )}
           </Formik>
@@ -116,4 +116,4 @@ function Signup({ isOpen, onClose, setUser }) {
   );
 }
 
-export { Login, Signup }; 
+export { Login, Signup };
