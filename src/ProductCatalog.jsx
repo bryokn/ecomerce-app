@@ -18,7 +18,9 @@ function ProductCatalog({ addToCart }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    setProducts(data.liquors);
+    fetch("http://localhost:3000/liquors")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
   }, []);
 
   const handleAddToCart = (product) => {
@@ -82,9 +84,7 @@ function ProductCatalog({ addToCart }) {
 
               <Text colorScheme="black">Volume: {product.volume_ml}ml</Text>
               <Text colorScheme="black">Price: $ {product.price_usd}</Text>
-              <Text colorScheme="green">
-                {product.availability}
-              </Text>
+              <Text colorScheme="green">{product.availability}</Text>
 
               <Button
                 variant="solid"
