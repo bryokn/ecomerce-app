@@ -22,6 +22,7 @@ This is a Liquor E-Commerce web application built using React, Formik, Chakra UI
     1. Clone the repository. 
     2. Run npm install to install dependencies. 
     3. Run npm start or npm run dev to start the application.
+    4. To start sever, run json-server --watch db.json
 
 ## Usage 
     • Visit the deployed application or run it locally. 
